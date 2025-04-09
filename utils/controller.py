@@ -15,3 +15,12 @@ def remove_user(users_data: list) -> None:
     for user in users_data:
         if user['name'] == user_tbr:
             users_data.remove({'name': 'Bartlomiej', 'location': 'Lublin', 'posts': 2})
+
+
+def edit_user(users_data: list) -> None:
+    user_tbe = input('podaj nazwę znajomego do edycji: ')
+    for user in users_data:
+        if user['name'] == user_tbe:
+            user['name'] = input('podaj nowe imie: ')
+            user['location'] = input('podaj nową lokalizacje: ')
+            user['posts'] = input('podaj nową liczbę postów: ')
