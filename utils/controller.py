@@ -8,3 +8,10 @@ def add_user(users_data: list) -> None:
     new_location = input('podaj miasto pochodzenia nowego znajomego: ')
     new_posts = int(input('podaj ilość postów nowego znajomego: '))
     users_data.append({'name': new_name, 'location': new_location, 'posts': new_posts})
+
+
+def remove_user(users_data: list) -> None:
+    user_tbr = input('podaj nazwę znajomego do usunięcia: ')
+    for user in users_data:
+        if user['name'] == user_tbr:
+            users_data.remove({'name': 'Bartlomiej', 'location': 'Lublin', 'posts': 2})
